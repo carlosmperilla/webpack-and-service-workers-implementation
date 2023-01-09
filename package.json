@@ -1,0 +1,24 @@
+{
+  "name": "webpack-and-service-workers-implementation",
+  "version": "1.0.0",
+  "description": "A project to test webpack and service workers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmperilla/webpack-and-service-workers-implementation.git"
+  },
+  "keywords": [
+    "webpack",
+    "service-workers",
+    "sass"
+  ],
+  "author": "Carlos Manuel Perilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlosmperilla/webpack-and-service-workers-implementation/issues"
+  },
+  "homepage": "https://github.com/carlosmperilla/webpack-and-service-workers-implementation#readme"
+}
