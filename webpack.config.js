@@ -81,5 +81,6 @@ module.exports = {
             new CssMinimizerPlugin(),
             new TerserPlugin(),
         ]
-    }
+    },
+    distDir: 'dist',
 }
