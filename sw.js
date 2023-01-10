@@ -1,5 +1,5 @@
 const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v1';
-importScripts('../filesList.js');
+importScripts('./filesList.js');
 
 self.addEventListener('install', () => {
     

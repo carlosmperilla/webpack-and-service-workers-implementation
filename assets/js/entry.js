@@ -4,4 +4,4 @@ import './slider/sliderDOM';
 import './menu';
 
 if (navigator.serviceWorker)
-    navigator.serviceWorker.register('dist/sw.js');
+    navigator.serviceWorker.register('./sw.js');
