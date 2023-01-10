@@ -1,3 +1,6 @@
+// Debe permanecer en el directorio raíz para poder activar el evento 'fetch'
+// Si no no puede trackear los archivos.
+
 const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v1';
 importScripts('./filesList.js');
 
@@ -10,7 +13,6 @@ self.addEventListener('install', () => {
 })
 
 self.addEventListener('activate', (e) => {
-    console.log("activatitation")
     e.waitUntil(
         caches.keys().then((cacheNames) => {
             let promises = cacheNames.map(cacheName => {
@@ -23,12 +25,10 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', (e) => {
-    console.log("fetching")
     e.respondWith(
         caches.match(e.request).then( (response) => {
             return searchInCacheOrMakeRequest(e.request);
         }).catch((err) => {
-            console.log("error en fetching")
             if (e.request.mode == 'navigate')
                 return caches.match(e.request);
         })
@@ -47,8 +47,6 @@ async function searchInCacheOrMakeRequest(request) {
                 cache.put(request, fetchResponse.clone());
                 return fetchResponse;
             })
-            console.log(cacheResponse)
-            console.log(fetchPromise)
             return cacheResponse || fetchPromise;
         })
 }

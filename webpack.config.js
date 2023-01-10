@@ -44,8 +44,6 @@ module.exports = {
         new FilesListPlugin(),
         new CopyPlugin({
             patterns: [
-            //   { from: "./sw.js", to: "./dist/sw.js" },
-            //   { from: "./sw.js", to: "./sw.js" },
              "./sw.js" ,
             ]})
     ],
