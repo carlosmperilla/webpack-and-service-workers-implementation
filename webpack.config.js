@@ -82,5 +82,4 @@ module.exports = {
             new TerserPlugin(),
         ]
     },
-    distDir: 'dist',
 }
