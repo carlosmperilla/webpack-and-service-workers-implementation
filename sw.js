@@ -1,4 +1,4 @@
-const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v4';
+const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v1';
 importScripts('../filesList.js');
 
 self.addEventListener('install', () => {
@@ -10,6 +10,7 @@ self.addEventListener('install', () => {
 })
 
 self.addEventListener('activate', (e) => {
+    console.log("activatitation")
     e.waitUntil(
         caches.keys().then((cacheNames) => {
             let promises = cacheNames.map(cacheName => {
@@ -22,10 +23,12 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', (e) => {
+    console.log("fetching")
     e.respondWith(
         caches.match(e.request).then( (response) => {
             return searchInCacheOrMakeRequest(e.request);
         }).catch((err) => {
+            console.log("error en fetching")
             if (e.request.mode == 'navigate')
                 return caches.match(e.request);
         })
