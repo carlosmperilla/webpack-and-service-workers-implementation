@@ -30,7 +30,7 @@ module.exports = {
     entry: './assets/js/entry.js',
     output: {
         publicPath: '/',
-        path: path.join(__dirname, '..'),
+        path: path.join(__dirname, 'dist'),
         filename: 'dist/js/[name].[contenthash].js',
         assetModuleFilename: 'assets/imgs/[hash][ext][query]'
     },
