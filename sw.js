@@ -44,6 +44,8 @@ async function searchInCacheOrMakeRequest(request) {
                 cache.put(request, fetchResponse.clone());
                 return fetchResponse;
             })
+            console.log(cacheResponse)
+            console.log(fetchPromise)
             return cacheResponse || fetchPromise;
         })
 }
