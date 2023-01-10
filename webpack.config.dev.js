@@ -30,7 +30,7 @@ module.exports = {
     watch: true,
     output: {
         publicPath: '/',
-        path: path.join(__dirname, '..'),
+        path: path.join(__dirname, 'dist'),
         filename: 'dist/js/[name].[contenthash].js',
         assetModuleFilename: 'assets/imgs/[hash][ext][query]'
     },

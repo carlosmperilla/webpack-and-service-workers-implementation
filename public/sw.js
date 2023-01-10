@@ -1,4 +1,4 @@
-const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v1';
+const CACHE_NAME = 'VIDEOGAME-STORE_CACHE-v7';
 importScripts('./filesList.js');
 
 self.addEventListener('install', () => {

@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const htmlWebpack = new HtmlWebpackPlugin({
     inject: true,
@@ -41,6 +42,10 @@ module.exports = {
             filename: 'assets/css/[name].[contenthash].css'
         }),
         new FilesListPlugin(),
+        new CopyPlugin({
+            patterns: [
+              { from: "./sw.js", to: "./dist/sw.js" },
+            ]})
     ],
     module: {
         rules: [
